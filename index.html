@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王邓 - 个人简历</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #1a1a2e;
+      background: #fafafa;
+      line-height: 1.7;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== 头部 ===== */
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .subtitle {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      margin-top: 8px;
+    }
+    header .contact-row {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.9rem;
+    }
+    header .contact-row a { color: #93c5fd; }
+    header .contact-row a:hover { color: #bfdbfe; text-decoration: underline; }
+
+    /* ===== 区块 ===== */
+    section { padding: 48px 0; }
+    section + section { border-top: 1px solid #e5e7eb; }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #2563eb;
+      display: inline-block;
+    }
+
+    /* ===== 个人简介 ===== */
+    .about p { font-size: 1rem; color: #374151; }
+
+    /* ===== 技能 ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .skill-category h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 6px;
+    }
+    .skill-category p { font-size: 0.9rem; color: #4b5563; }
+
+    /* ===== 经历条目 ===== */
+    .entry { margin-bottom: 28px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .entry-header h3 { font-size: 1.05rem; font-weight: 600; color: #111827; }
+    .entry-header .date { font-size: 0.85rem; color: #6b7280; white-space: nowrap; }
+    .entry .org { font-size: 0.95rem; color: #2563eb; margin-top: 2px; }
+    .entry ul {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .entry li {
+      font-size: 0.9rem;
+      color: #374151;
+      margin-bottom: 4px;
+    }
+
+    /* ===== 项目 ===== */
+    .project { margin-bottom: 28px; }
+    .project:last-child { margin-bottom: 0; }
+    .project h3 { font-size: 1.05rem; font-weight: 600; }
+    .project .tech {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1e40af;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 4px;
+      line-height: 1.6;
+    }
+    .project p { font-size: 0.9rem; color: #374151; margin-top: 8px; }
+    .project .highlights {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .project .highlights li {
+      font-size: 0.9rem;
+      color: #374151;
+      margin-bottom: 4px;
+    }
+
+    /* ===== 页脚 ===== */
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 600px) {
+      header { padding: 60px 0 40px; }
+      header h1 { font-size: 1.8rem; }
+      .entry-header { flex-direction: column; }
+      .entry-header .date { order: -1; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== 头部 ========== -->
+  <header>
+    <div class="container">
+      <h1>王邓</h1>
+      <p class="subtitle">求职意向：嵌入式软件 / 电气控制</p>
+      <div class="contact-row">
+        <span>📧 <a href="mailto:wxdd0527@163.com">wxdd0527@163.com</a></span>
+        <span>📱 187-0674-7850</span>
+        <span>📍 江苏宿迁</span>
+        <span>💻 <a href="https://github.com/yourname" target="_blank">GitHub</a></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ========== 个人简介 ========== -->
+    <section class="about">
+      <h2>个人简介</h2>
+      <p>
+        西安理工大学控制科学与工程专业硕士研究生（专业前 10%），本科就读于电气工程与智能控制专业（专业前 20%）。
+        熟悉嵌入式开发、计算机视觉与控制算法，有无人机目标检测系统和机器人装配系统的完整项目经验，
+        具备从算法研发到工程落地的实践能力。
+      </p>
+    </section>
+
+    <!-- ========== 教育背景 ========== -->
+    <section>
+      <h2>教育背景</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>西安理工大学 · 控制科学与工程（硕士）</h3>
+          <span class="date">2024.09 — 2027.07</span>
+        </div>
+        <ul>
+          <li>专业排名前 10%</li>
+          <li>主修课程：复杂控制系统应用、系统辨识、模式识别、矩阵论、数理统计与随机过程、数字信号分析与处理、机器人控制技术等</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>西安理工大学 · 电气工程与智能控制（本科）</h3>
+          <span class="date">2020.09 — 2024.07</span>
+        </div>
+        <ul>
+          <li>GPA：4.02 / 5.0 &nbsp;|&nbsp; 加权平均成绩：85.54 &nbsp;|&nbsp; 专业排名前 20%</li>
+          <li>CET-4：422 分</li>
+          <li>主修课程：电力电子技术、自动控制原理、微机原理与嵌入式系统、数字电路、模拟电路、电机学、C/C++ 程序设计、ROS 操作系统、人工智能与机器学习等</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== 项目经历 ========== -->
+    <section>
+      <h2>项目经历</h2>
+
+      <div class="project">
+        <h3>🎯 基于 YOLOX 的无人机目标检测与自主打击系统</h3>
+        <span class="tech">Python · YOLOX · PyTorch · CUDA · ONNX · UART · UDP · Jetson Xavier NX · Ubuntu 18.04</span>
+        <p>
+          面向无人机对地面装甲车的自主检测与打击任务，与西北工业大学飞控团队协同开发。
+          负责机载感知系统：在 NVIDIA Jetson Xavier NX 嵌入式平台上部署改进 YOLOX 目标检测模型，
+          结合 D435i 深度相机获取目标 RGB-D 信息，实时计算装甲车相对于无人机的三维空间坐标及偏航角，
+          通过 UART 串口将目标位置信息传输至飞控系统。系统经过多个版本迭代优化，实现以下工程化功能：
+        </p>
+        <ul class="highlights">
+          <li>目标丢失自动重搜、UDP 实时图传至地面站</li>
+          <li>通电开机自动推理、连续帧验证消除误检</li>
+          <li>多目标置信度筛选等工程化功能</li>
+          <li>独立完成深度相机选型适配、串口通信协议设计及飞控数据对接，具备多传感器融合与跨团队协作能力</li>
+          <li>掌握深度学习模型在嵌入式边缘设备上的训练、优化与部署全流程，熟悉 CUDA 加速与 ONNX 模型转换</li>
+          <li>积累了从算法研发到工程落地的完整经验，掌握开机自启、自动录屏、远程图传等嵌入式系统工程化技术</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>🤖 基于双 UR5 机械臂的多层嵌套构件自主装配系统</h3>
+        <span class="tech">ISPsoft · McgsPro · PLC · 电机控制</span>
+        <p>
+          使用 PLC 设计电机控制算法，实现对硅单晶提拉设备提拉速度的精确调控；
+          通过 MCGS 触摸屏组态软件切换硅单晶提拉设备的提拉速度和旋转速度，
+          利用实时曲线组件显示速度和位移进行品质监控。
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>⚡ Buck-Boost 电力电子变换电路设计</h3>
+        <span class="tech">Matlab/Simulink · 电力电子 · 控制算法</span>
+        <p>
+          独立完成 Buck、Boost、Buck-Boost 三种 DC-DC 变换电路的原理分析与仿真验证，
+          使用 Matlab/Simulink 搭建电路模型，设计 PID 控制策略实现输出电压稳定调节，
+          撰写完整的电路工作原理分析文档。
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 专业技能 ========== -->
+    <section>
+      <h2>专业技能</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>编程语言</h3>
+          <p>扎实的 C 语言基础，熟悉 C++、Python、Matlab</p>
+        </div>
+        <div class="skill-category">
+          <h3>飞控框架</h3>
+          <p>熟悉 PX4/ArduPilot 飞控架构，了解 MAVROS 通信、串口通信</p>
+        </div>
+        <div class="skill-category">
+          <h3>嵌入式开发</h3>
+          <p>熟悉 STM32 开发，了解 FreeRTOS 实时操作系统；熟悉电路板原理和 PCB 布局，会使用示波器、万用表等电子设备</p>
+        </div>
+        <div class="skill-category">
+          <h3>视觉算法</h3>
+          <p>精通 OpenCV、YOLO 系列，掌握图像处理、目标检测、位姿估计</p>
+        </div>
+        <div class="skill-category">
+          <h3>控制算法</h3>
+          <p>精通 PID、MPC、状态估计（ESKF/UKF）、卡尔曼滤波</p>
+        </div>
+        <div class="skill-category">
+          <h3>仿真工具</h3>
+          <p>熟练使用 Gazebo、ROS/ROS2、CoppeliaSim 等仿真环境</p>
+        </div>
+        <div class="skill-category">
+          <h3>通信协议</h3>
+          <p>熟悉 UART、IIC、SPI、RS-232、RS-485、CAN、RS422</p>
+        </div>
+        <div class="skill-category">
+          <h3>其他</h3>
+          <p>熟练使用 Git；熟悉 PLC 硬件设计及软件编程；熟悉 SPWM、SVPWM、FOC 等电机控制方法</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 王邓 · 最后更新于 2026 年 6 月</p>
+  </footer>
+
+</body>
+</html>
